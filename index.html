@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K. Mounika's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .page-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>K. Mounika's Portfolio</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" onclick="showPage('home')">Home</a>
+        <a href="javascript:void(0);" onclick="showPage('resume')">Resume</a>
+        <a href="javascript:void(0);" onclick="showPage('contact')">Contact</a>
+        <a href="javascript:void(0);" onclick="showPage('skills')">Skills</a>
+        <a href="javascript:void(0);" onclick="showPage('projects')">Projects</a>
+    </nav>
+
+    <section id="home" class="page-content active">
+        <h2>Welcome to My Personal Website!</h2>
+        <p>Hi, I am K. Mounika. I am currently in my second year of B.Tech in Computer Science and Engineering (CSE) at VIET.</p>
+    </section>
+
+    <section id="resume" class="page-content">
+        <h2>Resume</h2>
+        <p>Here is a brief overview of my academic background and work experience.</p>
+        <ul>
+            <li><strong>Current Education:</strong> B.Tech in Computer Science and Engineering (CSE), II Year at VIET</li>
+            <li><strong>Location:</strong> Vizag (Visakhapatnam)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="page-content">
+        <h2>Contact Me</h2>
+        <p>You can reach me through email for any inquiries:</p>
+        <ul>
+            <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+        </ul>
+    </section>
+
+    <section id="skills" class="page-content">
+        <h2>Skills</h2>
+        <p>Here are some skills I have developed so far:</p>
+        <ul>
+            <li>Programming Languages: Python, C++, Java</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Database Management: MySQL</li>
+            <li>Problem Solving and Data Structures</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="page-content">
+        <h2>Projects</h2>
+        <p>Here are some projects I've worked on:</p>
+        <ul>
+            <li>Project 1: Web-based To-Do List App</li>
+            <li>Project 2: Simple Banking System (C++)</li>
+            <li>Project 3: Weather App using Python and APIs</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 K. Mounika. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page-content');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            var activePage = document.getElementById(pageId);
+            activePage.classList.add('active');
+        }
+    </script>
+</body>
+</html>
